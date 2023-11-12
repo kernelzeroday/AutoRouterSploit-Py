@@ -10,11 +10,12 @@ from colorama import Fore, Style
 
 
 # Configure logging
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(stream=sys.stdout, level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+
 class RouterSploitWrapper:
-    def __init__(self, num_threads=5, target_source='stdin'):
+    def __init__(self, num_threads=235, target_source='stdin'):
         self.num_threads = num_threads
         self.task_queue = Queue()
         self.target_source = target_source
